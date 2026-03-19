@@ -3,6 +3,7 @@
   "displayName": "slang-coder",
   "description": "Translate selected text to Hindi (Romanised) using Sarvam AI",
   "version": "0.0.1",
+  "publisher": "SushKrish",
   "engines": {
     "vscode": "^1.110.0"
   },
