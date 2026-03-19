@@ -1,0 +1,47 @@
+{
+  "name": "slang-coder",
+  "displayName": "slang-coder",
+  "description": "Translate selected text to Hindi (Romanised) using Sarvam AI",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.110.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:slang-coder.translate"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "slang-coder.translate",
+        "title": "Slangcoder: Translate"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "slang-coder.translate",
+        "key": "alt+t",
+        "when": "editorHasSelection && !isInDiffEditor"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "dependencies": {
+    "sarvamai": "^1.1.6"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.110.0",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.39.3"
+  }
+}
